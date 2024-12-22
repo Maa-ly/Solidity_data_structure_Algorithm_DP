@@ -6,7 +6,6 @@
 //Why use it?
 //It’s great for quickly finding or organizing things, but it can become messy if not balanced
 
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -54,7 +53,8 @@ contract BinaryTreeExample {
         }
         size++;
     }
-//////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////
 
     struct TreeNode {
         uint value;
@@ -62,11 +62,11 @@ contract BinaryTreeExample {
         uint right; // Pointer to the right child
         bool exists;
     }
-    
+
     mapping(uint => TreeNode) public tree;
-    uint public root;
+
     uint public treeSize;
-    
+
     function addNode(uint _value) public {
         if (treeSize == 0) {
             tree[treeSize] = TreeNode(_value, 0, 0, true);
@@ -93,5 +93,4 @@ contract BinaryTreeExample {
         }
         treeSize++;
     }
-    
 }
