@@ -6,7 +6,6 @@
 //Why use it?
 //It’s easy to add or remove chests without reshuffling everything, but finding a specific chest takes time because you have to follow the maps.
 
-
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -44,15 +43,14 @@ contract LinkedListExample {
         uint next; // Pointer to the next chest
         bool exists;
     }
-    
+
     mapping(uint => Treasure) public treasureMap;
-    uint public head; // Start of the treasure hunt
+
     uint public totalTreasures;
-    
+
     function addTreasure(uint _value) public {
         treasureMap[totalTreasures] = Treasure(_value, head, true);
         head = totalTreasures; // The new chest is now the first one
         totalTreasures++;
     }
-    
 }
